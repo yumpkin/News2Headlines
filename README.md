@@ -1,2 +1,2 @@
-News articles summerization
+## Headlines summerize news articles
 
