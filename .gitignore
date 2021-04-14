@@ -142,4 +142,5 @@ cython_debug/
 */.ipynb_checkpoints/*
 *.json
 *.xml
-
+*.tar
+*.zip
