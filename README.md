@@ -1,2 +1,2 @@
-## Headlines summerize news articles
+## Summary Construction for news articles: In search of the right headline.
 
