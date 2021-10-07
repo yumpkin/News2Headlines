@@ -1,3 +1,3 @@
-### Summary construction for news articles: In search of the right headline.
+### Summarizing news articles: In search of the right headline.
 
 ### In Progress
