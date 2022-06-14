@@ -1,0 +1,12 @@
+version: '3.7'
+volumes:
+  mluser_cache:
+    name: mluser_cache
+services:
+  mld07_transformers: 
+    build:
+      context:  '.'
+      dockerfile: 'Dockerfile'
+    image: 'mld07_transformers'
+    volumes:
+      - mluser_cache:/home/mluser/.cache

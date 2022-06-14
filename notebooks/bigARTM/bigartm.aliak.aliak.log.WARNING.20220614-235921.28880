@@ -1,0 +1,9 @@
+Log file created at: 2022/06/14 23:59:21
+Running on machine: aliak
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0614 23:59:21.777823 28880 helpers.cc:221] File already exists: rbc_batches/aaaaaa.batch
+W0614 23:59:21.817731 28880 helpers.cc:221] File already exists: rbc_batches/aaaaab.batch
+W0614 23:59:21.818399 28880 collection_parser.cc:252] Expected 1 documents to parse, found 1599
+W0614 23:59:21.818409 28880 collection_parser.cc:255] Expected 1 triples describing collection, found 80840
+W0615 00:01:57.320951 28880 check_messages.h:1082] Inconsistent fields size in ThetaMatrix: 1599 vs 0 vs 1599 vs 0;
+W0615 00:07:12.374590 28880 check_messages.h:1082] Inconsistent fields size in ThetaMatrix: 1599 vs 0 vs 1599 vs 0;

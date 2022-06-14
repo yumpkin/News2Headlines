@@ -144,3 +144,5 @@ cython_debug/
 *.xml
 *.tar
 *.zip
+chromedriver
+
