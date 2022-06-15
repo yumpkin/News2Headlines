@@ -140,7 +140,6 @@ cython_debug/
 # custom
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
-*.json
 *.xml
 *.tar
 *.zip
