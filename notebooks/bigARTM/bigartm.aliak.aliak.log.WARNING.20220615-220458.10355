@@ -1,0 +1,8 @@
+Log file created at: 2022/06/15 22:04:58
+Running on machine: aliak
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W0615 22:04:58.133191 10355 helpers.cc:221] File already exists: rbc_batches/aaaaaa.batch
+W0615 22:04:58.218374 10355 helpers.cc:221] File already exists: rbc_batches/aaaaab.batch
+W0615 22:04:58.219486 10355 collection_parser.cc:252] Expected 1 documents to parse, found 1599
+W0615 22:04:58.219506 10355 collection_parser.cc:255] Expected 1 triples describing collection, found 80840
+E0615 22:05:01.097936 10355 c_interface.cc:59] InvalidOperation :  Unable to initialize matrix from dict dictionary. Either the dictionary is empty, or no tokens in the dictionary matches class_id(s), listed in the configuration of the model

@@ -1,0 +1,4 @@
+Log file created at: 2022/06/15 22:05:01
+Running on machine: aliak
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0615 22:05:01.097936 10355 c_interface.cc:59] InvalidOperation :  Unable to initialize matrix from dict dictionary. Either the dictionary is empty, or no tokens in the dictionary matches class_id(s), listed in the configuration of the model

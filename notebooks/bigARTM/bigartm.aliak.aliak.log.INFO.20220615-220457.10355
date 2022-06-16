@@ -1,0 +1,48 @@
+Log file created at: 2022/06/15 22:04:57
+Running on machine: aliak
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0615 22:04:57.782728 10355 c_interface.cc:127] Logging enabled to .
+I0615 22:04:57.783164 10355 c_interface.cc:128] BigARTM version: v0.9.2
+I0615 22:04:57.839679 10355 c_interface.cc:271] Pass MasterModelConfig: topic_name_size=0, score_config_size=1, num_processors=0, pwt_name=pwt, nwt_name=nwt, num_document_passes=0, reuse_theta=no, cache_theta=no, opt_for_avx=yes, disk_cache_path= to ArtmCreateMasterModel
+I0615 22:04:57.862272 10355 c_interface.cc:274] Creating MasterModel (id=1)...
+W0615 22:04:58.133191 10355 helpers.cc:221] File already exists: rbc_batches/aaaaaa.batch
+W0615 22:04:58.218374 10355 helpers.cc:221] File already exists: rbc_batches/aaaaab.batch
+W0615 22:04:58.219486 10355 collection_parser.cc:252] Expected 1 documents to parse, found 1599
+W0615 22:04:58.219506 10355 collection_parser.cc:255] Expected 1 triples describing collection, found 80840
+I0615 22:04:58.220618 10355 c_interface.cc:375] Pass cefc1e06-04e1-4d0c-bf6c-e4cb645e7269 to MN4artm4core15MasterComponentEFvRKSsE
+I0615 22:04:58.220747 10355 c_interface.cc:389] Pass GatherDictionaryArgs: dictionary_target_name=cefc1e06-04e1-4d0c-bf6c-e4cb645e7269, data_path=rbc_batches, symmetric_cooc_values=0 to MN4artm4core15MasterComponentEFvRKNS_20GatherDictionaryArgsEE
+I0615 22:04:58.220808 10355 dictionary_operations.cc:261] Found 2 batches in 'rbc_batches' folder
+I0615 22:04:58.229209 10355 dictionary_operations.cc:325] Find 1000 unique tokens in 1599 items
+I0615 22:04:58.229841 10355 dictionary_operations.cc:589] Dictionary name='cefc1e06-04e1-4d0c-bf6c-e4cb645e7269' contains entries: @default_class:1000; 
+I0615 22:04:58.236097 10355 c_interface.cc:271] Pass MasterModelConfig: topic_name_size=0, score_config_size=1, num_processors=0, pwt_name=pwt, nwt_name=nwt, num_document_passes=0, reuse_theta=no, cache_theta=no, opt_for_avx=yes, disk_cache_path= to ArtmCreateMasterModel
+I0615 22:04:58.236131 10355 c_interface.cc:274] Creating MasterModel (id=2)...
+I0615 22:04:58.238569 10355 c_interface.cc:375] Pass dict to MN4artm4core15MasterComponentEFvRKSsE
+I0615 22:04:58.238807 10355 c_interface.cc:389] Pass GatherDictionaryArgs: dictionary_target_name=dict, data_path=rbc_batches, symmetric_cooc_values=0 to MN4artm4core15MasterComponentEFvRKNS_20GatherDictionaryArgsEE
+I0615 22:04:58.238873 10355 dictionary_operations.cc:261] Found 2 batches in 'rbc_batches' folder
+I0615 22:04:58.250630 10355 dictionary_operations.cc:325] Find 1000 unique tokens in 1599 items
+I0615 22:04:58.251138 10355 dictionary_operations.cc:589] Dictionary name='dict' contains entries: @default_class:1000; 
+I0615 22:05:01.021106 10355 c_interface.cc:271] Pass MasterModelConfig: topic_name_size=26, class=(text:1), class=(headline:1), score_config_size=1, num_processors=2, pwt_name=pwt, nwt_name=nwt, num_document_passes=10, reuse_theta=yes, cache_theta=yes, opt_for_avx=yes, disk_cache_path= to ArtmCreateMasterModel
+I0615 22:05:01.021288 10355 c_interface.cc:274] Creating MasterModel (id=3)...
+I0615 22:05:01.021384 11776 processor.cc:724] Processor thread started
+I0615 22:05:01.021457 11775 processor.cc:724] Processor thread started
+I0615 22:05:01.021612 10355 c_interface.cc:375] Pass pwt to MN4artm4core15MasterComponentEFvRKSsE
+I0615 22:05:01.021697 10355 c_interface.cc:375] Pass nwt to MN4artm4core15MasterComponentEFvRKSsE
+I0615 22:05:01.022181 10355 c_interface.cc:389] Pass InitializeModelArgs: model_name=pwt, dictionary_name=dict, topic_name_size=26, seed=-1 to MN4artm4core15MasterComponentEFvRKNS_19InitializeModelArgsEE
+I0615 22:05:01.022356 10355 master_component.cc:629] 1000 tokens were present in the dictionary, but excluded from the model
+I0615 22:05:01.047627 11776 processor.cc:740] No data in processing queue, waiting...
+I0615 22:05:01.049724 11775 processor.cc:740] No data in processing queue, waiting...
+E0615 22:05:01.097936 10355 c_interface.cc:59] InvalidOperation :  Unable to initialize matrix from dict dictionary. Either the dictionary is empty, or no tokens in the dictionary matches class_id(s), listed in the configuration of the model
+I0615 22:05:16.347486 10355 c_interface.cc:271] Pass MasterModelConfig: topic_name_size=26, score_config_size=1, num_processors=2, pwt_name=pwt, nwt_name=nwt, num_document_passes=10, reuse_theta=yes, cache_theta=yes, opt_for_avx=yes, disk_cache_path= to ArtmCreateMasterModel
+I0615 22:05:16.347771 10355 c_interface.cc:274] Creating MasterModel (id=4)...
+I0615 22:05:16.347821 11785 processor.cc:724] Processor thread started
+I0615 22:05:16.347895 11784 processor.cc:724] Processor thread started
+I0615 22:05:16.347978 10355 c_interface.cc:375] Pass pwt to MN4artm4core15MasterComponentEFvRKSsE
+I0615 22:05:16.348039 10355 c_interface.cc:375] Pass nwt to MN4artm4core15MasterComponentEFvRKSsE
+I0615 22:05:16.348212 10355 c_interface.cc:389] Pass InitializeModelArgs: model_name=pwt, dictionary_name=dict, topic_name_size=26, seed=-1 to MN4artm4core15MasterComponentEFvRKNS_19InitializeModelArgsEE
+I0615 22:05:16.354554 10355 master_component.cc:664] InitializeModel() created matrix pwt with 26 topics and 1000 tokens; 
+I0615 22:05:16.354717 10355 c_interface.cc:389] Pass InitializeModelArgs: model_name=nwt, dictionary_name=dict, topic_name_size=26, seed=-1 to MN4artm4core15MasterComponentEFvRKNS_19InitializeModelArgsEE
+I0615 22:05:16.359318 10355 master_component.cc:664] InitializeModel() created matrix nwt with 26 topics and 1000 tokens; 
+I0615 22:05:16.359485 10355 c_interface.cc:231] ArtmCopyRequestedMessage is copying 334 bytes...
+I0615 22:05:16.372150 11784 processor.cc:740] No data in processing queue, waiting...
+I0615 22:05:16.378268 11785 processor.cc:740] No data in processing queue, waiting...
+I0615 22:18:36.670954 10355 c_interface.cc:231] ArtmCopyRequestedMessage is copying 168 bytes...
