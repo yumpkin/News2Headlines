@@ -144,4 +144,4 @@ cython_debug/
 *.tar
 *.zip
 chromedriver
-
+*.jsonl
