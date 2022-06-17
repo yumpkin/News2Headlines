@@ -78,7 +78,6 @@ def evalute_sample_from_dataset(summary_data='./outputs/predictions_headline_art
 
         summary = example[0]
         reference = example[1]
-        text = example[2]
         #Calculating Bleu Scores
         bleu = np.asarray(calculate_Bleu_Score(summary, reference), dtype=np.float32)
         bleu_scores = np.sum((bleu_scores, bleu), axis = 0) 
