@@ -16,23 +16,20 @@ The model of use if `T5` since it deals with each NLP task in `text-to-text` man
 
 The project is structured into the following folders:
 
-- ***`dataset`*** contains РБС articles in the format of `JSON` and `txt` files. 
+- ***`dataset`*** contains a bit over `2000` РБС articles in the format of `JSON` and `txt` files. Alongside with the files `gazeta_2k.json` and `ria_2k.json` each of which contains `2000` articles of Gazeta and `RIA` respectively.
+`gazeta` and `ria` files are just a pre-proccessed slices from two large opensource datasets `Russiya Segodnyia` and `Gazeta v.1`. Credits to them for offering it opensourced.
 - - `JSON` files are well structred, and have two variants:
     - Each article is indexed by a hash of its text body, for further possible checkups.
     - Each article is indexed by just by its enumerated index (its postional order in the dataset)
 
-- - `txt` files are mainly three and can be found in the folder `rbc_dataset_txt`:
-  
-    - `rbc_only_annotation.txt` contains all overviews that are usually written before the main article text and right after the headline. they offer a brief describtion of the full article following.
-    - `rbc_only_headlines.txt` contains all headlines in the corresponding order, and split with a special charachter and a line break.
-    -  `rbc_only_body.txt` contains all articles' full-text in the corresponding order, and split with a special charachter and a line break.
-  
-- - `pickles` dedicated for pickling dataframes that are usually modified by a function that takes a significant amount of execution time, this is helpful so that the dataframe can be just reused when needed without going through the same process again, as pickles also prserve the runtime state.
 
 - ***`notebooks`*** contains the notebooks:
     
-  -  `summarization_T5_finetune.ipynb` contains the main task of the project, splitting the dataset into `train, test, validate`, load it and finetune the model, generate abstractive summaries, evaluate the results.
+  -  `summarization_finetune.ipynb` contains the main task of the project, splitting the dataset into `train, test, validate`, load it and finetune the model, generate abstractive summaries, evaluate the results.
   
+  - `baseline.ipynb` dedicated for getting the baselines and evaluting them along with the abstract summaries.
+  
+  - `dataset_stats.ipynb` for all comparison parameters between the datasets used.
     
   -  `extractive_summarization.ipynb` covers various techniques of extractive summarization, from `tf-idf` to `BERT-extractive`.
   
@@ -46,8 +43,8 @@ The project is structured into the following folders:
 
 - ***`scripts`*** folder that contains utility scripts that are more convenient to be used in a command-line interface (CLI).
   - `bow_uci.py` a script that can be used to build the bag of words for `bigARTM`.
-  - `evalute_summary.py` is used to evaluate summaries, it has functions that take a `csv` file as for all `summary-article` pairs, and then print the average scores of `ROUGE` and `BLEU` or just `summary-sentence` and `source-sentence` as an argument, and then returns its corresponding scores.
-  
+  - `evalute.py` is used to evaluate summaries, it has functions that take a `csv` file as for all `summary-article` pairs, and then print the average scores of `ROUGE` and `BLEU` or just `summary-sentence` and `source-sentence` as an argument, and then returns its corresponding scores.
+  - `plot_eval.py` is for plotting the results of evaluation into pretty tables.
   - `kmeans.py` is used for clustering a set of articles.
   - `parse_rbc.py` a script that runs to parse RBC website and append articles to dataset. or create a one if does not exist.
   
