@@ -106,3 +106,20 @@ def evalute_sample_from_dataset(summary_data='./outputs/predictions_headline_art
     print("Final ROUGEL Scores", rougeL_scores)
     print("Final ROUGELsum Scores", rougeLsum_scores)
     return bleu_scores, rouge1_scores, rouge2_scores, rougeL_scores, rougeLsum_scores
+
+
+def present_metric_results(datafile_csv):
+    summary_datafile = datafile_csv
+    
+    bleu_scores, rouge1_scores, rouge2_scores, rougeL_scores, rougeLsum_scores = evalute_sample_from_dataset(summary_datafile, 300)
+
+    rouge_eval = []
+    rouge_eval.append(rouge1_scores[0].tolist())
+    rouge_eval.append(rouge2_scores[0].tolist())
+    rouge_eval.append(rougeL_scores[0].tolist())
+    rouge_eval.append(rougeLsum_scores[0].tolist())
+
+    rouge_eval = (np.array(rouge_eval))
+    print("="*20, datafile_csv)
+    plot_rouge(rouge_eval)
+    plot_bleu(bleu_scores)

@@ -145,3 +145,4 @@ cython_debug/
 *.zip
 chromedriver
 *.jsonl
+*.pdf
