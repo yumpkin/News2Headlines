@@ -17,7 +17,8 @@ The model of use if `T5` since it deals with each NLP task in `text-to-text` man
 The project is structured into the following folders:
 
 - ***`dataset`*** contains a bit over `2000` РБС articles in the format of `JSON` and `txt` files. Alongside with the files `gazeta_2k.json` and `ria_2k.json` each of which contains `2000` articles of Gazeta and `RIA` respectively.
-`gazeta` and `ria` files are just a pre-proccessed slices from two large opensource datasets `Russiya Segodnyia` and `Gazeta v.1`. Credits to them for offering it opensourced.
+`gazeta` and `ria` files are just a pre-proccessed slices from two large opensource datasets [RossiyaSegodnya](https://github.com/RossiyaSegodnya/ria_news_dataset) and [Gazeta v.1](https://github.com/IlyaGusev/gazeta). Credits to the folks behind them.
+
 - - `JSON` files are well structred, and have two variants:
     - Each article is indexed by a hash of its text body, for further possible checkups.
     - Each article is indexed by just by its enumerated index (its postional order in the dataset)
